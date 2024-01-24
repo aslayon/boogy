@@ -1146,14 +1146,13 @@ void LinearSearchByDuplicate_KyeWord_String(LinkedList* _ptList, string String, 
 	int Match_Count = 0;
 	for (int i = 0; i < _ptList->m_uCount; i++) {
 		_ptList->m_pCurrent->m_pCurrent = _ptList->m_pCurrent->m_pHead;
+		cout << _ptList->m_pCurrent->m_Date << "_______________________________________________" << endl;
 		for (int j = 0; j < _ptList->m_pCurrent->m_uCount; j++) {
 
 			if (_ptList->m_pCurrent->m_pCurrent->m_String.find(String) != std::string::npos) {
-				if (i % 4 == 0) {
-					cout << ("\n");
-				}
-				cout << _ptList->m_pCurrent->m_Date << "의 " << j << "번째에 있습니다.\n";
-				cout << _ptList->m_pCurrent->m_pCurrent->m_String << '\t' << _ptList->m_pCurrent->m_pCurrent->m_iObject;
+				
+				cout << j << "번째에 있습니다.__";
+				cout << _ptList->m_pCurrent->m_pCurrent->m_String << '\t' << _ptList->m_pCurrent->m_pCurrent->m_iObject<<endl;
 				Match_Count++;
 
 			}
